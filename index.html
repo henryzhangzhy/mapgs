@@ -4,27 +4,27 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Online HD Mapping with Standard Definition Maps">
-  <meta property="og:title" content="Enhancing Online Road Network Perception and Reasoning with Standard Definition Maps"/>
-  <meta property="og:description" content="Online road network perception and reasoning is challenging due to occlusion by on-road objects, especially at long-range as required by planning. In this example, the left turn map elements are heavily occluded by the vehicles. The baseline (TopoNet) using only image data misses the left turn while our method (TopoNet+OSMR--leveraging rasterized Standard Definition (SD) maps as the prior) predicts it correctly. Visualizations represent centerlines with connectivity information."/>
-  <meta property="og:url" content="https://henryzhangzhy.github.io/sdhdmap/"/>
+  <meta name="description" content="MapGS: Generalizable Pretraining and Data Augmentation for Online Mapping via Novel View Synthesis">
+  <meta property="og:title" content="MapGS: Generalizable Pretraining and Data Augmentation for Online Mapping via Novel View Synthesis"/>
+  <meta property="og:description" content="Online mapping algorithms struggle when deployed on a vehicle with different sensor configurations and require labeled data with the same sensor configuration. With the source sensor configuration images collected by Argoverse 2 (AV2) data collection vehicles (top row), we propose to leverage Gaussian splatting to render images in the target nuScenes (NUSC) sensor configuration (bottom row). The synthesized dataset, named nuAV2, is used to train online mapping algorithms to reduce the generalization gap using different training paradigms."/>
+  <meta property="og:url" content="https://henryzhangzhy.github.io/mapgs/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/toposmr_figure_2_singlecol_resized6.jpg" />
-  <meta property="og:image:width" content="1295"/>
-  <meta property="og:image:height" content="1512"/>
+  <meta property="og:image" content="static/images/mapgs_teaser.jpeg" />
+  <meta property="og:image:width" content="1800"/>
+  <meta property="og:image:height" content="980"/>
 
 
-  <meta name="twitter:title" content="Enhancing Online Road Network Perception and Reasoning with Standard Definition Maps">
-  <meta name="twitter:description" content="Online road network perception and reasoning is challenging due to occlusion by on-road objects, especially at long-range as required by planning. In this example, the left turn map elements are heavily occluded by the vehicles. The baseline (TopoNet) using only image data misses the left turn while our method (TopoNet+OSMR--leveraging rasterized Standard Definition (SD) maps as the prior) predicts it correctly. Visualizations represent centerlines with connectivity information.">
+  <meta name="twitter:title" content="MapGS: Generalizable Pretraining and Data Augmentation for Online Mapping via Novel View Synthesis">
+  <meta name="twitter:description" content="Online mapping algorithms struggle when deployed on a vehicle with different sensor configurations and require labeled data with the same sensor configuration. With the source sensor configuration images collected by Argoverse 2 (AV2) data collection vehicles (top row), we propose to leverage Gaussian splatting to render images in the target nuScenes (NUSC) sensor configuration (bottom row). The synthesized dataset, named nuAV2, is used to train online mapping algorithms to reduce the generalization gap using different training paradigms.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/toposmr_figure_2_singlecol_resized6.jpg">
+  <meta name="twitter:image" content="static/images/mapgs_teaser.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="online mapping, high-definition map, standard-definition map">
+  <meta name="keywords" content="sensor configuration generalization, novel view synthesis, gaussian splatting, online mapping, high-definition map">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Enhancing Online Road Network Perception and Reasoning with Standard Definition Maps</title>
+  <title>MapGS: Generalizable Pretraining and Data Augmentation for Online Mapping via Novel View Synthesis</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,26 +52,20 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Enhancing Online Road Network Perception and Reasoning with Standard Definition Maps</h1>
+            <h1 class="title is-1 publication-title">MapGS: Generalizable Pretraining and Data Augmentation for Online Mapping via Novel View Synthesis</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hengyuan Zhang</a><sup>*1</sup>,
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hengyuan Zhang</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">David Paz</a><sup>*2</sup>,
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">David Paz</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yuliang Guo</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Arun Das</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
                 <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xinyu Huang</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Karsten Haug</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Henrik I. Christensen</a><sup>1</sup>,
@@ -82,8 +76,8 @@
             </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">UC San Diego<sup>1</sup>, Bosch Center for AI (BCAI)<sup>2</sup><br>IROS2024</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">UC San Diego<sup>1</sup>, Bosch Center for AI (BCAI)<sup>2</sup><br>arXiv</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -141,11 +135,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/IROS24_2566_VI_i_720.mp4"
         type="video/mp4">
       </video>
@@ -154,7 +147,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -165,7 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Autonomous driving for urban and highway driving applications often requires High Definition (HD) maps to generate a navigation plan. Nevertheless, various challenges arise when generating and maintaining HD maps at scale. While recent online mapping methods have started to emerge, their performance especially for longer ranges is limited by heavy occlusion in dynamic environments. With these considerations in mind, our work focuses on leveraging lightweight and scalable priors--Standard Definition (SD) maps--in the development of online vectorized HD map representations. We first examine the integration of prototypical rasterized SD map representations into various online mapping architectures. Furthermore, to identify lightweight strategies, we extend the OpenLane-V2 dataset with OpenStreetMaps and evaluate the benefits of graphical SD map representations. A key finding from designing SD map integration components is that SD map encoders are model agnostic and can be quickly adapted to new architectures that utilize bird's eye view (BEV) encoders. Our results show that making use of SD maps as priors for the online mapping task can significantly speed up convergence and boost the performance of the online centerline perception task by 30% (mAP). Furthermore, we show that the introduction of the SD maps leads to a reduction of the number of parameters in the perception and reasoning task by leveraging SD map graphs while improving the overall performance. 
+            Online mapping reduces the reliance of autonomous vehicles on high-definition (HD) maps, significantly enhancing scalability. However, recent advancements often overlook cross-sensor configuration generalization, leading to performance degradation when models are deployed on vehicles with different camera intrinsics and extrinsics. With the rapid evolution of novel view synthesis methods, we investigate the extent to which these techniques can be leveraged to address the sensor configuration generalization challenge. We propose a novel framework leveraging Gaussian splatting to reconstruct scenes and render camera images in target sensor configurations. The target config sensor data, along with labels mapped to the target config, are used to train online mapping models. Our proposed framework on the nuScenes and Argoverse 2 datasets demonstrates a performance improvement of 18% through effective dataset augmentation, achieves faster convergence and efficient training, and exceeds state-of-the-art performance when using only 25% of the original training data. This enables data reuse and reduces the need for laborious data labeling.
           </p>
         </div>
       </div>
@@ -296,13 +289,13 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @inproceedings{zhang2024sdhdmap,
-          title={Enhancing Online Road Network Perception and Reasoning with Standard Definition Maps},
-          author={Zhang, Hengyuan and Paz, David and Guo, yuliang and Das, Arun and Huang, Xinyu and Haug, Karsten and Christensen, Henrik and Ren, Liu},
-          booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+        @inproceedings{zhang2025mapgs,
+          title={MapGS: Generalizable Pretraining and Data Augmentation for Online Mapping via Novel View Synthesis},
+          author={Zhang, Hengyuan and Paz, David and Guo, yuliang and Huang, Xinyu and Christensen, Henrik and Ren, Liu},
+          booktitle={arXiv},
           pages={},
-          year={2024},
-          organization={IEEE}
+          year={2025},
+          organization={arXiv}
         }
       </code></pre>
     </div>
